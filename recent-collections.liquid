@@ -1,0 +1,262 @@
+{%- comment -%}
+  Section: Recently Created Collections
+  Uses collection ID as a proxy for creation order (higher ID = newer).
+  Images are loaded via JS fetch per-collection to avoid Liquid timeout.
+{%- endcomment -%}
+
+<div class="recent-collections" id="rc-{{ section.id }}" style="padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;background:#ffffff;">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 style="text-align:{{ section.settings.heading_alignment }};font-size:{{ section.settings.heading_size }}px;margin-bottom:30px;">
+        {{ section.settings.heading | escape }}
+      </h2>
+    {%- endif -%}
+
+    <div class="rc-grid" id="rc-grid-{{ section.id }}" style="display:grid;grid-template-columns:repeat({{ section.settings.columns }},1fr);gap:{{ section.settings.gap }}px;">
+      <p style="text-align:center;opacity:.5;grid-column:1/-1;">Loading collections...</p>
+    </div>
+  </div>
+</div>
+
+{%- comment -%} Minimal JSON: only id, title, url, handle, count. No images here to avoid crashes. {%- endcomment -%}
+<script type="application/json" id="rc-data-{{ section.id }}">
+[
+{%- assign rc_first = true -%}
+{%- for collection in collections -%}
+  {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}{%- continue -%}{%- endif -%}
+  {%- unless rc_first -%},{%- endunless -%}
+  {%- assign rc_first = false -%}
+  {
+    "id": {{ collection.id | json }},
+    "title": {{ collection.title | json }},
+    "url": {{ collection.url | json }},
+    "handle": {{ collection.handle | json }},
+    "image": {% if collection.image != blank %}{{ collection.image | image_url: width: 600 | json }}{% else %}""{% endif %},
+    "count": {{ collection.all_products_count | json }}
+  }
+{%- endfor -%}
+]
+</script>
+
+<script>
+(function() {
+  try {
+    var sid = {{ section.id | json }};
+    var limit = {{ section.settings.collections_to_show | json }};
+    var showCount = {{ section.settings.show_product_count | json }};
+    var radius = {{ section.settings.card_radius | json }};
+    var ratio = {{ section.settings.image_ratio | json }};
+    var titleSize = {{ section.settings.title_size | json }};
+
+    var el = document.getElementById('rc-data-' + sid);
+    if (!el) return;
+
+    var data = JSON.parse(el.textContent);
+    if (!data || !data.length) return;
+
+    data.sort(function(a, b) { return b.id - a.id; });
+    var recent = data.slice(0, limit);
+
+    var grid = document.getElementById('rc-grid-' + sid);
+    if (!grid) return;
+
+    function esc(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function renderCards(items) {
+      var html = '';
+      for (var i = 0; i < items.length; i++) {
+        var c = items[i];
+        var t = esc(c.title);
+        var imgHtml = '';
+        if (c.image) {
+          imgHtml = '<div style="aspect-ratio:' + ratio + ';overflow:hidden;background:#ffffff;"><img src="' + c.image + '" alt="' + t + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;"></div>';
+        } else {
+          imgHtml = '<div style="aspect-ratio:' + ratio + ';background:#ffffff;display:flex;align-items:center;justify-content:center;color:#999;font-size:14px;">No image</div>';
+        }
+        var countHtml = '';
+        if (showCount) {
+          countHtml = '<p style="margin:0;font-size:14px;opacity:.7;">' + c.count + (c.count === 1 ? ' product' : ' products') + '</p>';
+        }
+        html += '<a href="' + c.url + '" style="text-decoration:none;color:inherit;border-radius:' + radius + 'px;overflow:hidden;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s,box-shadow 0.2s;">' +
+          imgHtml +
+          '<div style="padding:16px;"><h3 style="margin:0 0 6px;font-size:' + titleSize + 'px;font-weight:600;">' + t + '</h3>' + countHtml + '</div></a>';
+      }
+      grid.innerHTML = html;
+    }
+
+    /* Render immediately with whatever images Liquid provided */
+    renderCards(recent);
+
+    /* For cards missing images, fetch from Shopify AJAX API to get product image */
+    var needImages = recent.filter(function(c) { return !c.image; });
+    if (needImages.length > 0) {
+      var loaded = 0;
+      needImages.forEach(function(c) {
+        fetch('/collections/' + c.handle + '/products.json?limit=1')
+          .then(function(r) { return r.json(); })
+          .then(function(json) {
+            if (json.products && json.products[0] && json.products[0].images && json.products[0].images[0]) {
+              c.image = json.products[0].images[0].src;
+            }
+          })
+          .catch(function() {})
+          .finally(function() {
+            loaded++;
+            if (loaded === needImages.length) {
+              renderCards(recent);
+            }
+          });
+      });
+    }
+
+  } catch(e) {
+    console.error('Recent Collections error:', e);
+  }
+})();
+</script>
+
+<style>
+  #rc-grid-{{ section.id }} a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12) !important;
+  }
+  @media (max-width: 768px) {
+    #rc-grid-{{ section.id }} {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 480px) {
+    #rc-grid-{{ section.id }} {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Recent Collections",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "New Collections"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "default": 28,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "collections_to_show",
+      "label": "Collections to show",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns (desktop)",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap between cards",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "1/1", "label": "Square (1:1)" },
+        { "value": "3/4", "label": "Portrait (3:4)" },
+        { "value": "4/3", "label": "Landscape (4:3)" },
+        { "value": "16/9", "label": "Widescreen (16:9)" }
+      ],
+      "default": "3/4"
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "default": 8,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Collection title size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_product_count",
+      "label": "Show product count",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recent Collections"
+    }
+  ]
+}
+{% endschema %}
