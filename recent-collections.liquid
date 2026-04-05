@@ -55,6 +55,10 @@
     if (!data || !data.length) return;
 
     data.sort(function(a, b) { return b.id - a.id; });
+
+    /* Filter out collections with no products */
+    data = data.filter(function(c) { return c.count > 0; });
+
     var recent = data.slice(0, limit);
 
     var grid = document.getElementById('rc-grid-' + sid);
