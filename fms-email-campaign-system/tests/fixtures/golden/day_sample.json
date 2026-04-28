@@ -1,0 +1,792 @@
+{
+  "generalSettings": {
+    "body": {
+      "backgroundColor": "#FFFFFF"
+    },
+    "buttonPresets": [
+      {
+        "id": "primary_button",
+        "name": "Primary button",
+        "styles": {
+          "backgroundColor": "#d66083",
+          "border": "0px solid #FFFFFF",
+          "borderRadius": "0px",
+          "color": "#FFFFFF",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "paddingBottom": "16px",
+          "paddingLeft": "16px",
+          "paddingRight": "16px",
+          "paddingTop": "16px"
+        }
+      },
+      {
+        "id": "secondary_button",
+        "name": "Secondary button",
+        "styles": {
+          "backgroundColor": "#FFFFFF",
+          "border": "2px solid #0e1b4d",
+          "borderRadius": "0px",
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "paddingBottom": "16px",
+          "paddingLeft": "16px",
+          "paddingRight": "16px",
+          "paddingTop": "16px"
+        }
+      },
+      {
+        "id": "tertiary_button",
+        "name": "Tertiary button",
+        "styles": {
+          "backgroundColor": "#0e1b4d",
+          "border": "2px solid #FFFFFF",
+          "borderRadius": "0px",
+          "color": "#FFFFFF",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "16px",
+          "paddingBottom": "16px",
+          "paddingLeft": "16px",
+          "paddingRight": "16px",
+          "paddingTop": "16px"
+        }
+      }
+    ],
+    "content": {
+      "backgroundColor": "#FFFFFF",
+      "color": "#212121",
+      "fontFamily": "Arial, sans-serif",
+      "fontSize": "14px",
+      "width": "800px"
+    },
+    "logo": {
+      "height": 169,
+      "id": "69a0bc40422ab25a22f5ffdc",
+      "isCustom": true,
+      "source": "/image/newsletter/69a0bc40422ab25a22f5ffdc",
+      "width": 850
+    },
+    "textPresets": [
+      {
+        "id": "heading_large",
+        "name": "Heading Large",
+        "styles": {
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "36px",
+          "lineHeight": "125%"
+        }
+      },
+      {
+        "id": "heading_medium",
+        "name": "Heading Medium",
+        "styles": {
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "30px",
+          "lineHeight": "125%"
+        }
+      },
+      {
+        "id": "heading_small",
+        "name": "Heading Small",
+        "styles": {
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "24px",
+          "lineHeight": "125%"
+        }
+      },
+      {
+        "id": "paragraph",
+        "name": "Paragraph",
+        "styles": {
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "14px",
+          "lineHeight": "150%"
+        }
+      },
+      {
+        "id": "footnote",
+        "name": "Footnote",
+        "styles": {
+          "color": "#0e1b4d",
+          "fontFamily": "Arial, sans-serif",
+          "fontSize": "12px",
+          "lineHeight": "150%"
+        }
+      }
+    ]
+  },
+  "id": "test-content-id",
+  "sections": [
+    {
+      "id": "6215fec5d3ad0a41ac6e0130",
+      "rows": [
+        {
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "id": "6220ab215ec14498ae421638",
+                  "logo": {
+                    "link": "[[account.website]]",
+                    "resizeWidth": 528
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "logo"
+                }
+              ],
+              "id": "6215fec5d3ad0a41ac6e0132",
+              "width": "800px"
+            }
+          ],
+          "id": "6215fec5d3ad0a41ac6e0131"
+        }
+      ],
+      "styleProperties": {
+        "backgroundColor": "#FFFFFF",
+        "isBackgroundPaddingsExcluded": true,
+        "paddingBottom": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "0px",
+        "verticalAlign": "middle"
+      },
+      "visibility": {
+        "isDesktopVisible": true,
+        "isMobileVisible": true
+      }
+    },
+    {
+      "id": "6098c67f66c23deb72eb779a",
+      "rows": [
+        {
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "components": [
+                    {
+                      "id": "69a0bd05741c607aa296407a",
+                      "role": "menu_text",
+                      "stylePresetID": "paragraph",
+                      "styleProperties": {
+                        "alignment": "center",
+                        "color": "#0e1b4d"
+                      },
+                      "text": "<p><a class=\"menu-block-link\" href=\"https://fabricmegastore.com/collections/new-designs\" style=\"color: #0e1b4d;font-weight: bold;\" target=\"_blank\">New Designs</a></p>",
+                      "type": "text"
+                    },
+                    {
+                      "id": "69a0bd05741c607aa296407b",
+                      "role": "menu_text",
+                      "stylePresetID": "paragraph",
+                      "styleProperties": {
+                        "alignment": "center",
+                        "color": "#0e1b4d"
+                      },
+                      "text": "<p><a class=\"menu-block-link\" href=\"https://fabricmegastore.com/collections/most-popular\" style=\"color: #0e1b4d;font-weight: bold;\" target=\"_blank\">Most Popular</a></p>",
+                      "type": "text"
+                    },
+                    {
+                      "id": "69a0bd05741c607aa296407c",
+                      "role": "menu_text",
+                      "stylePresetID": "paragraph",
+                      "styleProperties": {
+                        "alignment": "center",
+                        "color": "#0e1b4d"
+                      },
+                      "text": "<p><a class=\"menu-block-link\" href=\"https://fabricmegastore.com/collections/108-wide-quilt-backing\" style=\"color: #0e1b4d;font-weight: bold;\" target=\"_blank\">Quilt Backing</a></p>",
+                      "type": "text"
+                    },
+                    {
+                      "id": "69a0bd94741c607aa296407d",
+                      "role": "menu_text",
+                      "stylePresetID": "paragraph",
+                      "styleProperties": {
+                        "alignment": "center",
+                        "color": "#0e1b4d"
+                      },
+                      "text": "<p><a class=\"menu-block-link\" href=\"https://fabricmegastore.com/collections/fat-quarter-panel-bundles\" style=\"color: #0e1b4d;font-weight: bold;\" target=\"_blank\">Fat Quarters</a></p>",
+                      "type": "text"
+                    }
+                  ],
+                  "id": "69a0bd05741c607aa2964079",
+                  "stylePresetID": "paragraph",
+                  "styleProperties": {
+                    "color": "#0e1b4d",
+                    "paddingBottom": "12px",
+                    "paddingLeft": "12px",
+                    "paddingRight": "12px",
+                    "paddingTop": "12px"
+                  },
+                  "type": "menu"
+                },
+                {
+                  "id": "622894d2b8924912341f7365",
+                  "image": {
+                    "altText": "Butter Waffle",
+                    "height": 566,
+                    "id": "aaaaaaaaaaaaaaaaaaaaaaaa",
+                    "link": "https://fabricmegastore.com/collections/butter-waffle",
+                    "resizeHeight": 532.705882,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/aaaaaaaaaaaaaaaaaaaaaaaa",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a34000a70c653a31c5c",
+                  "image": {
+                    "altText": "Filler 0",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff0",
+                    "link": "https://fabricmegastore.com/collections/filler-0",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff0",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a35000a70c653a31c5d",
+                  "image": {
+                    "altText": "Filler 1",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff1",
+                    "link": "https://fabricmegastore.com/collections/filler-1",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff1",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a36000a70c653a31c5e",
+                  "image": {
+                    "altText": "Filler 2",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff2",
+                    "link": "https://fabricmegastore.com/collections/filler-2",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff2",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a4e000a70c653a31c6f",
+                  "image": {
+                    "altText": "Filler 3",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff3",
+                    "link": "https://fabricmegastore.com/collections/filler-3",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff3",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a4d000a70c653a31c6e",
+                  "image": {
+                    "altText": "Filler 4",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff4",
+                    "link": "https://fabricmegastore.com/collections/filler-4",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff4",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a4b000a70c653a31c6d",
+                  "image": {
+                    "altText": "Filler 5",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff5",
+                    "link": "https://fabricmegastore.com/collections/filler-5",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff5",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a49000a70c653a31c6b",
+                  "image": {
+                    "altText": "Filler 6",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff6",
+                    "link": "https://fabricmegastore.com/collections/filler-6",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff6",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a4a000a70c653a31c6c",
+                  "image": {
+                    "altText": "Filler 7",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff7",
+                    "link": "https://fabricmegastore.com/collections/filler-7",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff7",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a47000a70c653a31c6a",
+                  "image": {
+                    "altText": "Filler 8",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff8",
+                    "link": "https://fabricmegastore.com/collections/filler-8",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff8",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a45000a70c653a31c69",
+                  "image": {
+                    "altText": "Filler 9",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff9",
+                    "link": "https://fabricmegastore.com/collections/filler-9",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff9",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a44000a70c653a31c68",
+                  "image": {
+                    "altText": "Filler 10",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffffa",
+                    "link": "https://fabricmegastore.com/collections/filler-10",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffffa",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a43000a70c653a31c67",
+                  "image": {
+                    "altText": "Filler 11",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffffb",
+                    "link": "https://fabricmegastore.com/collections/filler-11",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffffb",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a41000a70c653a31c66",
+                  "image": {
+                    "altText": "Filler 12",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffffc",
+                    "link": "https://fabricmegastore.com/collections/filler-12",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffffc",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a3f000a70c653a31c65",
+                  "image": {
+                    "altText": "Filler 13",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffffd",
+                    "link": "https://fabricmegastore.com/collections/filler-13",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffffd",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a3e000a70c653a31c64",
+                  "image": {
+                    "altText": "Filler 14",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffffe",
+                    "link": "https://fabricmegastore.com/collections/filler-14",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffffe",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a3c000a70c653a31c63",
+                  "image": {
+                    "altText": "Filler 15",
+                    "height": 378,
+                    "id": "ffffffffffffffffffffffff",
+                    "link": "https://fabricmegastore.com/collections/filler-15",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/ffffffffffffffffffffffff",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a3b000a70c653a31c62",
+                  "image": {
+                    "altText": "Filler 16",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff10",
+                    "link": "https://fabricmegastore.com/collections/filler-16",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff10",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a39000a70c653a31c61",
+                  "image": {
+                    "altText": "Filler 17",
+                    "height": 378,
+                    "id": "fffffffffffffffffffffff11",
+                    "link": "https://fabricmegastore.com/collections/filler-17",
+                    "resizeHeight": 355.764706,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/fffffffffffffffffffffff11",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                },
+                {
+                  "id": "69d40a37000a70c653a31c5f",
+                  "image": {
+                    "altText": "",
+                    "height": 565,
+                    "id": "69d40c6a9dc20b9a99269d2b",
+                    "link": "https://fabricmegastore.com/products/quilting-cotton-mystery-fabric-bundle",
+                    "resizeHeight": 531.75,
+                    "resizeWidth": 800,
+                    "source": "/image/newsletter/69d40c6a9dc20b9a99269d2b",
+                    "width": 850
+                  },
+                  "styleProperties": {
+                    "alignment": "center",
+                    "color": "#0e1b4d",
+                    "paddingBottom": "0px",
+                    "paddingLeft": "0px",
+                    "paddingRight": "0px",
+                    "paddingTop": "0px"
+                  },
+                  "type": "image"
+                }
+              ],
+              "id": "6098c67f66c23deb72eb779c",
+              "width": "800px"
+            }
+          ],
+          "id": "6098c67f66c23deb72eb779b"
+        }
+      ],
+      "styleProperties": {
+        "backgroundColor": "#FFFFFF",
+        "isBackgroundPaddingsExcluded": true,
+        "padding": "32px",
+        "paddingBottom": "5px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "paddingTop": "5px",
+        "verticalAlign": "middle"
+      },
+      "visibility": {
+        "isDesktopVisible": true,
+        "isMobileVisible": true
+      }
+    },
+    {
+      "id": "617907d759b3af4e5159b634",
+      "rows": [
+        {
+          "columns": [
+            {
+              "blocks": [
+                {
+                  "id": "62162bb9fcf43715207baf47",
+                  "social": {
+                    "icons": [
+                      {
+                        "link": "https://facebook.com/fabricmegastore",
+                        "source": "dynamicImage/social/facebook/48/24/default",
+                        "type": "facebook"
+                      },
+                      {
+                        "link": "https://instagram.com/fabricmegastore",
+                        "source": "dynamicImage/social/instagram/48/24/default",
+                        "type": "instagram"
+                      },
+                      {
+                        "link": "https://twitter.com/FabricMegaStore",
+                        "source": "dynamicImage/social/twitter/48/24/default",
+                        "type": "twitter"
+                      },
+                      {
+                        "link": "https://tiktok.com/",
+                        "source": "dynamicImage/social/tiktok/48/24/default",
+                        "type": "tiktok"
+                      }
+                    ],
+                    "shape": "circle",
+                    "size": "24px"
+                  },
+                  "styleProperties": {
+                    "alignment": "left",
+                    "padding": "12px"
+                  },
+                  "type": "social"
+                },
+                {
+                  "id": "617907ec59b3af4e5159b638",
+                  "stylePresetID": "footnote",
+                  "styleProperties": {
+                    "color": "#FFFFFF",
+                    "linkColor": "#d66083",
+                    "padding": "12px"
+                  },
+                  "text": "<p style=\"margin: 0px;\">\u00a9 [[account.name]]</p>",
+                  "type": "text"
+                },
+                {
+                  "id": "617907de59b3af4e5159b637",
+                  "stylePresetID": "footnote",
+                  "styleProperties": {
+                    "color": "#FFFFFF",
+                    "linkColor": "#d66083",
+                    "padding": "12px"
+                  },
+                  "text": "<p style=\"margin: 0px;\">[[account.address]], [[account.city]], [[account.country]], [[account.zipCode]]<br id=\"isPasted\"></p><p style=\"margin: 0px;\" data-translation-key=\"permission_reminder\"><br>This email was sent to [[contact.email]] because you've subscribed on our site or made a purchase.</p>",
+                  "type": "text"
+                },
+                {
+                  "id": "617907ef59b3af4e5159b639",
+                  "stylePresetID": "footnote",
+                  "styleProperties": {
+                    "color": "#FFFFFF",
+                    "linkColor": "#d66083",
+                    "padding": "12px"
+                  },
+                  "text": "<p style=\"margin: 0px;\"><a href=\"[[preference_link]]\" target=\"_blank\" data-translation-key=\"preference\">Update preferences</a> | <a href=\"[[unsubscribe_link]]\" target=\"_blank\" data-translation-key=\"unsubscribe\">Unsubscribe</a></p>",
+                  "type": "text"
+                }
+              ],
+              "id": "617907d759b3af4e5159b636",
+              "width": "752px"
+            }
+          ],
+          "id": "617907d759b3af4e5159b635"
+        }
+      ],
+      "styleProperties": {
+        "backgroundColor": "#0e1b4d",
+        "paddingBottom": "24px",
+        "paddingLeft": "24px",
+        "paddingRight": "24px",
+        "paddingTop": "24px"
+      },
+      "visibility": {
+        "isDesktopVisible": true,
+        "isMobileVisible": true
+      }
+    }
+  ]
+}
