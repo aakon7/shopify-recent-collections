@@ -1,0 +1,64 @@
+[brand]
+id = "fms"
+display_name = "Fabric Mega Store"
+sender_email = "info@fabricmegastore.com"
+sender_name = "Fabric Mega Store"
+preheader = "Free Shipping On USA Orders Over $100"
+shopify_domain = "fabricmegastore.com"
+shopify_store_handle = "941152-f7"
+timezone = "America/Chicago"
+
+[brand.template]
+# Existing template campaign that we clone for new sends
+campaign_id = ""
+logo_image_id = "69a0bc40422ab25a22f5ffdc"
+mystery_image_id = "69d40c6a9dc20b9a99269d2b"
+mystery_product_url = "https://fabricmegastore.com/products/quilting-cotton-mystery-fabric-bundle"
+menu_handles = ["new-designs", "most-popular", "108-wide-quilt-backing", "fat-quarter-panel-bundles"]
+menu_labels = ["New Designs", "Most Popular", "Quilt Backing", "Fat Quarters"]
+
+[brand.banner_sizes]
+landscape_height = 378
+portrait_height = 566
+display_width = 800
+source_width = 850
+
+# Reused block IDs from the canonical FMS template, in vertical order.
+# The first is the featured (top) slot; the last is the Mystery Bundle.
+[brand.block_ids]
+images = [
+    "622894d2b8924912341f7365",
+    "69d40a34000a70c653a31c5c",
+    "69d40a35000a70c653a31c5d",
+    "69d40a36000a70c653a31c5e",
+    "69d40a4e000a70c653a31c6f",
+    "69d40a4d000a70c653a31c6e",
+    "69d40a4b000a70c653a31c6d",
+    "69d40a49000a70c653a31c6b",
+    "69d40a4a000a70c653a31c6c",
+    "69d40a47000a70c653a31c6a",
+    "69d40a45000a70c653a31c69",
+    "69d40a44000a70c653a31c68",
+    "69d40a43000a70c653a31c67",
+    "69d40a41000a70c653a31c66",
+    "69d40a3f000a70c653a31c65",
+    "69d40a3e000a70c653a31c64",
+    "69d40a3c000a70c653a31c63",
+    "69d40a3b000a70c653a31c62",
+    "69d40a39000a70c653a31c61",
+]
+mystery = "69d40a37000a70c653a31c5f"
+
+[rate_limits]
+# 1 request per 2.5s = 0.4 qps; FMS storefront 429s above this
+shopify_qps = 0.4
+omnisend_qps = 5.0
+shopify_max_retries = 1
+shopify_backoff_seconds = 8.0
+
+[paths]
+state_db = ".fms/state.db"
+content_root = "campaigns"
+banner_input_root = "input/banners"
+report_root = "reports"
+log_file = ".fms/logs/fms.log"
